@@ -19,9 +19,9 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 );
 
 const Welcome = () => {
-  const { value } = useContext(TransactionContext);
-  console.log(value);
-  const connectWallet = () => {};
+  const { connectWallet } = useContext(TransactionContext);
+  console.log(connectWallet);
+
   const handleSumbit = () => {};
   return (
     <div className="flex w-full justify-center items-center">
