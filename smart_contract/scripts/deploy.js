@@ -11,7 +11,7 @@ const main = async () => {
   const transactions = await Transactions.deploy();
 
   await transactions.deployed();
-  console.log("Greeter deployed to:", transactions.address);
+  console.log("Transactions deployed to:", transactions.address);
 };
 
 // We recommend this pattern to be able to use async/await everywhere
@@ -19,10 +19,10 @@ const main = async () => {
 const runMain = async () => {
   try {
     await main();
-    ProcessingInstruction.exit(0);
+    process.exit(0);
   } catch (error) {
     console.error(error);
-    ProcessingInstruction.exit(1);
+    process.exit(1);
   }
 };
 
